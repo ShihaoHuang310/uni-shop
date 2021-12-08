@@ -1,6 +1,6 @@
 <template>
   <view>
-    
+    gooddetail
   </view>
 </template>
 

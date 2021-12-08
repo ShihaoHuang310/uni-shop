@@ -42,14 +42,19 @@
         "pages":[
           {
             "path":"goods_detail/goods_detail",
-            "style":{}
+            "style":{
+              "navigationBarTitleText":"商品详情",
+              "enablePullDownRefresh":false
+            }
           }
             ,{
                     "path" : "goods_list/goods_list",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
+                    "navigationBarTitleText": "商品列表",
+                    "enablePullDownRefresh": true,
+                    "onReachBottomDistance":150,
+                    "backgroundColor":"#F8F8F8f8"
                 }
                 
                 }
@@ -57,7 +62,7 @@
                     "path" : "search/search",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
+                    "navigationBarTitleText": "搜素",
                     "enablePullDownRefresh": false
                 }
                 
