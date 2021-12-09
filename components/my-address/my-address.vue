@@ -54,13 +54,13 @@
         // 2. 用户成功的选择了收货地址
         if(err!=null && succ.errMsg === 'chooseAddress:ok'){
           this.updateAddress(succ)
-          // 3. 用户没有授权
+        }
+        // 3. 用户没有授权
         if(err && err.errMsg === 'chooseAddress:fail auth deny' || err.errMsg === 'chooseAddress:fail authorize no response'){
           this.reAuth()// 调用 this.reAuth() 方法，向用户重新发起授权申请
         }
-        },
-     
-        // 调用此方法，重新发起收货地址的授权
+      },
+      // 调用此方法，重新发起收货地址的授权
       async reAuth(){
           // 3.1 提示用户对地址进行授权
           const [err2,confirmResult] = await uni.showModal({
@@ -83,8 +83,7 @@
              }
            })
         }
-        
-      }
+      
     }
   }
 </script>
